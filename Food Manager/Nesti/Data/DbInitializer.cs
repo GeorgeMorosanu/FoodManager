@@ -48,28 +48,73 @@ namespace Nesti.Data
 
             var measurements = new List<Measurement> { gram, gram, gram, gram, gram, piece, gram };
 
-            foreach(string s in names)
+            foreach(string n in names)
             {
                 var gp = new GenericProduct
                 {
-                    Name = names[index],
+                    Name = n,
                     Measurement = measurements[index]
                 };
                 context.Add(gp);
                 index++;
             }
 
-            index = 0;
+            context.SaveChanges();
 
             // products 
 
+            index = 0;
+            Random rnd = new Random();
+
+            var prod = new Product()
+            {
+                Name = "Black Canyon",
+                Barcode = rnd.Next(1, 100),
+                Price = rnd.Next(100, 7000),
+                GenericProduct = context.GenericProducts.Where(x=>x.Name== "Ground beef").First()
+            };
+            context.Add(prod);
+
+            names = new List<string> { "Thousand Hills", "Lusk", "Monterey", "Hunts", "Kraft", "Happy", "Barilla" };
+
+            foreach (string n in names)
+            {
+                var p = new Product
+                {
+                    Name = n,
+                    Barcode = rnd.Next(1, 100),
+                    Price = rnd.Next(100, 7000),
+                    GenericProduct = context.GenericProducts.ToList()[index]
+                };
+
+                context.Add(p);
+                index++;
+            }
             
-
-
-
-
-
             context.SaveChanges();
+
+            //ingredients
+
+            //meal
+
+            index = 0;
+
+            names = new List<string> { "Lasagna", "Fish" };
+            
+            var meal_Lasagna = new Meal()
+            {
+                Name = names[0],
+                PreparationTime = rnd.Next(20,120),
+                Instructions = "Preheat oven to 350 degrees F (175 degrees C).\n"+
+                "In a large skillet,\n"+
+                "cook and stir ground beef until brown.Add mushrooms and onions; saute until onions are transparent.Stir in pasta sauce, and heat through.\n" +
+                "In a medium size bowl, combine cottage cheese, ricotta cheese, grated Parmesan cheese, and eggs.\n" +
+                "Spread a thin layer of the meat sauce in the bottom of a 13x9 inch pan.Layer with uncooked lasagna noodles, cheese mixture, mozzarella cheese, and meat sauce.Continue layering until all ingredients are used, reserving 1 / 2 cup mozzarella. Cover pan with aluminum foil.\n" +
+                "Bake in preheated oven for 45 minutes.Uncover, and top with remaining half cup of mozzarella cheese.Bake for an additional 15 minutes.Remove from oven, and let stand 10 to 15 minutes before serving.",
+                Ingredients = new List<Ingredient>() { }
+            };
+
+            //week
         }
 
     }
