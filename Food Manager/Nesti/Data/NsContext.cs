@@ -28,5 +28,6 @@ namespace Nesti.Data
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Meal> Meals { get; set; }
         public DbSet<Week> Weeks { get; set; }
+        public DbSet<Measurement> Measurements { get; set; }
     }
 }
