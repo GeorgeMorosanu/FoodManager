@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28527.54
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nesti", "Food Manager\Nesti.csproj", "{4C4C8919-DBA7-4ABE-A092-892D48A3CF2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nesti", "Nesti\Nesti.csproj", "{4C4C8919-DBA7-4ABE-A092-892D48A3CF2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
