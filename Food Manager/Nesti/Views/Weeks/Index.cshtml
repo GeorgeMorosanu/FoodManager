@@ -6,121 +6,138 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h2>Index</h2>
-
-
 <header>
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-lg-4 my-auto h-100">
-            <div class="col-lg-9">
-                <div class="ingredients-container">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-lg-4 my-auto h-100">
+                <div class="col-lg-9">
+                    <div class="ingredients-container">
 
-                    <div id="generateList" class="btn btn-primary" style="margin: 25px 0">
-                        Generate ingredient list
-                    </div>
-                    <div id="ingredient-list" class="ingredient-list">
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Cheese</p>
-                            </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">600 gr</p>
-                            </div>
+                        <div id="generateList" class="btn btn-primary" style="margin: 25px 0">
+                            Generate ingredient list
                         </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Yogurt</p>
+                        <div id="ingredient-list" class="ingredient-list">
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Cheese</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">600 gr</p>
+                                </div>
                             </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">1.8 L</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Yogurt</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">1.8 L</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Eggs</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Eggs</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">2 pc</p>
+                                </div>
                             </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">2 pc</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Pizza bottom</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">6 pc</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Pizza bottom</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Pasta</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">1.4kg</p>
+                                </div>
                             </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">6 pc</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Beef</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">800 gr</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Pasta</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Tomatos</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">600 gr</p>
+                                </div>
                             </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">1.4kg</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Lettuce</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">1 kg</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Beef</p>
-                            </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">800 gr</p>
-                            </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Tomatos</p>
-                            </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">600 gr</p>
-                            </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Lettuce</p>
-                            </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">1 kg</p>
-                            </div>
-                        </div>
-                        <div class="row" name="ingredient row">
-                            <div class="col-lg-7">
-                                <p class="ingred-p">Hot dogs</p>
-                            </div>
-                            <div class="col-lg-5">
-                                <p class="ingred-p" style="text-align: right;">4 pc</p>
+                            <div class="row" name="ingredient row">
+                                <div class="col-lg-7">
+                                    <p class="ingred-p">Hot dogs</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="ingred-p" style="text-align: right;">4 pc</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-
-
-
-        <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-            <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-                <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Monday</div>
-                <div id="monday" style="min-height: 50vh">
-                    @foreach (var wm in context.WeekMeals.Where(x => x.Day == 0))
-                    {
-                        var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Monday</div>
+                    <div id="monday" style="min-height: 50vh">
                         <div>
                             <table class="table">
                                 <thead>
-                                <tr>
-                                    <th>@meal.Name</th>
-                                    <th>@meal.PreparationTime</th>
-                                </tr>
+                                    <tr>
+                                        <th>Yogurt</th>
+                                        <th>2</th>
+                                    </tr>
                                 </thead>
                             </table>
                         </div>
-                    }
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Fajita</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Apple</th>
+                                        <th>1</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Lasagna</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                     <div class="bottom">
                         <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
                             Add meal
@@ -128,167 +145,597 @@
                     </div>
                 </div>
             </div>
-        </div>
-                
-    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Tuesday</div>
-            <div id="tuesday" style="min-height: 50vh">
-                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 1))
-                {
-                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                    <div>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                            </thead>
-                        </table>
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Tuesday</div>
+                    <div id="tuesday" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 50vh">
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Yogurt</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Veggie Hotdogs</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Bananas</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Pizza</th>
+                                        <th>1</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Cookies</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </div>
-                }
-                <div class="bottom">
-                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                        Add meal
-                    </button>
+                    <div class="bottom">
+                        <button id="tuesday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                            Add meal
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Wednesday</div>
+                    <div id="wednesday" style="min-height: 50vh">
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Burrito</th>
+                                        <th>1</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Boost</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ananas</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Spaghetti</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <button id="wednesday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                            Add meal
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Thursday</div>
+                    <div id="thursday" style="min-height: 50vh">
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Yogurt</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Pizza</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Noodles</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <button id="thursday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                            Add meal
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Friday</div>
+                    <div id="friday" style="min-height: 50vh">
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Boost</th>
+                                        <th>1</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Fajitas</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Lobster</th>
+                                        <th>6</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <button id="friday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                            Add meal
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Saturday</div>
+                    <div id="saturday" style="min-height: 50vh">
+                        <div class="bottom">
+                            <button id="saturday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                                Add meal
+                            </button>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Cookies</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Boost</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Hotdogs</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+                <div class="panel panel-primary h-100 borderbottomfix borderfix-right">
+                    <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Sunday</div>
+                    <div id="sunday" style="min-height: 50vh">
+                        <div class="bottom">
+                            <button id="sunday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                                Add meal
+                            </button>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Yougurt</th>
+                                        <th>5</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Pizza</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Kiwi</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Salad</th>
+                                        <th>2</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</header>
 
-    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Wednsday</div>
-            <div id="wednsday" style="min-height: 50vh">
-                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 2))
-                {
-                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                    <div>
-                        <table class="table">
-                            <thead>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="min-width: 800px;" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container" name="search bar" style="margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div id="custom-search-input">
+                                <div class="input-group col-md-12">
+                                    <input type="text" class="form-control input-lg" placeholder="Search for a meal" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info btn-lg" type="button">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mealcard-container">
+                    <div class="card card-default" name="meal card" style="max-width: 25vw;">
+                        <div class="card-body card-5-7">
+                            <div class="card-left">
+                                <img class="meal-image" src="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto,w_600,h_750,c_fit,fl_strip_profile/https://s3.amazonaws.com/pixtruder/original_images/39ee03d747ff0e93c946bdaaf07320e7679f0287" class="img-responsive">
+                            </div>
+                            <div class="card-right">
+                                <div class="card-headings">30 min</div>
+                                <div>Spaghetti</div>
+                                <p class="card-p">Boil water in a large pot. To make sure pasta doesn't stick together, use at least 4 quarts of water for every pound of noodles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-default" name="meal card" style="max-width: 25vw;">
+                        <div class="card-body card-5-7">
+                            <div class="card-left">
+                                <img class="meal-image" src="https://www.thewholesomedish.com/wp-content/uploads/2018/07/Best-Lasagna-550.jpg" class="img-responsive">
+                            </div>
+                            <div class="card-right">
+                                <div class="card-headings">45 min</div>
+                                <div>Lasagna</div>
+                                <p class="card-p">Preheat oven to 175 degrees C.In a large skillet, cook and stir ground beef until brown.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-default" name="meal card" style="max-width: 25vw;">
+                        <div class="card-body card-5-7">
+                            <div class="card-left">
+                                <img class="meal-image" src="https://eatcaulipower.com/sites/default/files/product-images/Pizza-ThreeCheese_1.png" class="img-responsive">
+                            </div>
+                            <div class="card-right">
+                                <div class="card-headings">25 min</div>
+                                <div>Chease pizza</div>
+                                <p class="card-p">Put a lot of chease on the pizza bottom and bake it at 200°C for untill it looks good.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-default" name="meal card" style="max-width: 25vw;">
+                        <div class="card-body card-5-7">
+                            <div class="card-left">
+                                <img class="meal-image" src="https://www.diet.com/recipes/recipe_img/muesli-and-yogurt.jpg" class="img-responsive">
+                            </div>
+                            <div class="card-right">
+                                <div class="card-headings">5 min</div>
+                                <div>Musli & yogurt</div>
+                                <p class="card-p">Pour the yougurt in a bowl and add musli, sugar spice and everything nice!<3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-default" name="meal card" style="max-width: 25vw;">
+                        <div class="card-body card-5-7">
+                            <div class="card-left">
+                                <img class="meal-image" src="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/05/chicken-fajitas.jpg?itok=zkc2flqY" class="img-responsive">
+                            </div>
+                            <div class="card-right">
+                                <div class="card-headings">30 min</div>
+                                <div>Fajita</div>
+                                <p class="card-p">Cut the chicken in small pieces and fry on a pan. In the mean time cut the vegetables. Then put it all in the pancake.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-default" name="meal card" style="max-width: 25vw;">
+                        <div class="card-body card-5-7">
+                            <div class="card-left">
+                                <img class="meal-image" src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Fimage%2F2015%2F07%2Fmain%2F1508p73-clean-veggie-burgers.jpg%3Fitok%3DO9_SJh-8&w=450&c=sc&poi=face&q=85" class="img-responsive">
+                            </div>
+                            <div class="card-right">
+                                <div class="card-headings">20 min</div>
+                                <div>Vegan Hamburger</div>
+                                <p class="card-p">Fry the veggie steak on the pan and slice vegetables. Make fries out of a sweet potato and cook in the oven.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/js/scripts.js"></script>
+
+
+
+
+@* 
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Monday</div>
+        <div id="monday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 0))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>@meal.Name</th>
                                 <th>@meal.PreparationTime</th>
                             </tr>
-                            </thead>
-                        </table>
-                    </div>
-                }
-                <div class="bottom">
-                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                        Add meal
-                    </button>
+                        </thead>
+                    </table>
                 </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Thursday</div>
-            <div id="thursday" style="min-height: 50vh">
-                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 3))
-                {
-                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                    <div>
-                        <table class="table">
-                            <thead>
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Tuesday</div>
+        <div id="tuesday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 1))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>@meal.Name</th>
                                 <th>@meal.PreparationTime</th>
                             </tr>
-                            </thead>
-                        </table>
-                    </div>
-                }
-                <div class="bottom">
-                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                        Add meal
-                    </button>
+                        </thead>
+                    </table>
                 </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Friday</div>
-            <div id="friday" style="min-height: 50vh">
-                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 4))
-                {
-                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                    <div>
-                        <table class="table">
-                            <thead>
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Wednsday</div>
+        <div id="wednsday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 2))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>@meal.Name</th>
                                 <th>@meal.PreparationTime</th>
                             </tr>
-                            </thead>
-                        </table>
-                    </div>
-                }
-                <div class="bottom">
-                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                        Add meal
-                    </button>
+                        </thead>
+                    </table>
                 </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Saturday</div>
-            <div id="saturday" style="min-height: 50vh">
-                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 5))
-                {
-                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                    <div>
-                        <table class="table">
-                            <thead>
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Thursday</div>
+        <div id="thursday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 3))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>@meal.Name</th>
                                 <th>@meal.PreparationTime</th>
                             </tr>
-                            </thead>
-                        </table>
-                    </div>
-                }
-                <div class="bottom">
-                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                        Add meal
-                    </button>
+                        </thead>
+                    </table>
                 </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
             </div>
         </div>
     </div>
+</div>
 
-
-    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Sunday</div>
-            <div id="sunday" style="min-height: 50vh">
-                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 6))
-                {
-                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                    <div>
-                        <table class="table">
-                            <thead>
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Friday</div>
+        <div id="friday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 4))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>@meal.Name</th>
                                 <th>@meal.PreparationTime</th>
                             </tr>
-                            </thead>
-                        </table>
-                    </div>
-                }
-                <div class="bottom">
-                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                        Add meal
-                    </button>
+                        </thead>
+                    </table>
                 </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
             </div>
         </div>
     </div>
+</div>
+
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Saturday</div>
+        <div id="saturday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 5))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Sunday</div>
+        <div id="sunday" style="min-height: 50vh">
+            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 6))
+            {
+                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            }
+            <div class="bottom">
+                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                    Add meal
+                </button>
+            </div>
+        </div>
+    </div>
+</div> *@
