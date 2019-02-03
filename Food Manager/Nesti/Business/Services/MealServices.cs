@@ -49,5 +49,10 @@ namespace Nesti.Business.Services
         {
             return _databaseNsContext.Meals.ToList();
         }
+
+        public List<Meal> searchMealByName(string name)
+        {
+            return _databaseNsContext.Meals.Where(x=>x.Name.Contains(name)).ToList();
+        }
     }
 }

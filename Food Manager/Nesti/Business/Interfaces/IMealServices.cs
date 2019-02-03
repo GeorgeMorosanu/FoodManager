@@ -13,5 +13,7 @@ namespace Nesti.Business.Interfaces
         void Edit(Meal meal);
         void Delete(Meal meal);
         bool Exists(Guid id);
+
+        List<Meal> searchMealByName(string name);
     }
 }
