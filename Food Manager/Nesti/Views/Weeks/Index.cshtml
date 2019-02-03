@@ -97,46 +97,20 @@
                 <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Monday</div>
                     <div id="monday" style="min-height: 50vh">
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Yogurt</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Fajita</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Apple</th>
-                                        <th>1</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Lasagna</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 0))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
                     </div>
                     <div class="bottom">
                         <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
@@ -149,56 +123,20 @@
                 <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Tuesday</div>
                     <div id="tuesday" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 50vh">
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Yogurt</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Veggie Hotdogs</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Bananas</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Pizza</th>
-                                        <th>1</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Cookies</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 1))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
                     </div>
                     <div class="bottom">
                         <button id="tuesday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
@@ -211,46 +149,20 @@
                 <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Wednesday</div>
                     <div id="wednesday" style="min-height: 50vh">
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Burrito</th>
-                                        <th>1</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Boost</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Ananas</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Spaghetti</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 2))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
                     </div>
                     <div class="bottom">
                         <button id="wednesday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
@@ -263,36 +175,20 @@
                 <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Thursday</div>
                     <div id="thursday" style="min-height: 50vh">
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Yogurt</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Pizza</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Noodles</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 3))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
                     </div>
                     <div class="bottom">
                         <button id="thursday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
@@ -305,36 +201,20 @@
                 <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Friday</div>
                     <div id="friday" style="min-height: 50vh">
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Boost</th>
-                                        <th>1</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Fajitas</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Lobster</th>
-                                        <th>6</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 4))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
                     </div>
                     <div class="bottom">
                         <button id="friday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
@@ -347,41 +227,27 @@
                 <div class="panel panel-primary h-100 borderbottomfix" style="border-radius: 0px">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Saturday</div>
                     <div id="saturday" style="min-height: 50vh">
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 5))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
+
                         <div class="bottom">
                             <button id="saturday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
                                 Add meal
                             </button>
                         </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Cookies</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Boost</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Hotdogs</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -389,51 +255,27 @@
                 <div class="panel panel-primary h-100 borderbottomfix borderfix-right">
                     <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Sunday</div>
                     <div id="sunday" style="min-height: 50vh">
+                        @foreach (var wm in context.WeekMeals.Where(x => x.Day == 6))
+                        {
+                            var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>@meal.Name</th>
+                                            <th>@meal.PreparationTime</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        }
+
                         <div class="bottom">
                             <button id="sunday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
                                 Add meal
                             </button>
                         </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Yougurt</th>
-                                        <th>5</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Pizza</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Kiwi</th>
-                                        <th>4</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Salad</th>
-                                        <th>2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -545,197 +387,3 @@
 </div>
 
 <script type="text/javascript" src="~/js/scripts.js"></script>
-
-
-
-
-@* 
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Monday</div>
-        <div id="monday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 0))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Tuesday</div>
-        <div id="tuesday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 1))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Wednsday</div>
-        <div id="wednsday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 2))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Thursday</div>
-        <div id="thursday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 3))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Friday</div>
-        <div id="friday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 4))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Saturday</div>
-        <div id="saturday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 5))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
-    <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
-        <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Sunday</div>
-        <div id="sunday" style="min-height: 50vh">
-            @foreach (var wm in context.WeekMeals.Where(x => x.Day == 6))
-            {
-                var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>@meal.Name</th>
-                                <th>@meal.PreparationTime</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            }
-            <div class="bottom">
-                <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
-                    Add meal
-                </button>
-            </div>
-        </div>
-    </div>
-</div> *@
