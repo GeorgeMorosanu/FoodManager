@@ -20,7 +20,21 @@ namespace Nesti.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseLazyLoadingProxies();
+            optionsBuilder.UseLazyLoadingProxies();
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<WeekMeal>()
+                .HasKey(wm => new { wm.WeekId, wm.MealId, wm.Day });
+            modelBuilder.Entity<WeekMeal>()
+                .HasOne(wm => wm.Week)
+                .WithMany(w => w.WeekMeals)
+                .HasForeignKey(wm => wm.WeekId);
+            modelBuilder.Entity<WeekMeal>()
+                .HasOne(wm => wm.Meal)
+                .WithMany(m => m.WeekMeals)
+                .HasForeignKey(wm => wm.MealId);
         }
 
         public DbSet<Product> Products { get; set; }
@@ -29,5 +43,8 @@ namespace Nesti.Data
         public DbSet<Meal> Meals { get; set; }
         public DbSet<Week> Weeks { get; set; }
         public DbSet<Measurement> Measurements { get; set; }
+        public DbSet<WeekMeal> WeekMeals { get; set; }
+
+         
     }
 }

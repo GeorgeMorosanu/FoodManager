@@ -203,21 +203,21 @@ namespace Nesti.Data
 
             //week
 
-            var week1 = new Week()
-            {
-                StartDate = new DateTime(2019, 2, 4),
-                EndDate = new DateTime(2019, 2, 10),
-                MealsMonday = new List<Meal>() { meal_Lasagna },
-                MealsTuesday = new List<Meal>() { normal_eggs },
-                MealsWednesday = new List<Meal>() { meal_Lasagna },
-                MealsThursday = new List<Meal>() { meal_Omelet },
-                MealsFriday = new List<Meal>() { meal_Lasagna },
-                MealsSaturday = new List<Meal>() { meal_Omelet },
-                MealsSunday = new List<Meal>() { normal_eggs }
-            };
-            context.Add(week1);
+            //var week1 = new Week()
+            //{
+            //    StartDate = new DateTime(2019, 2, 4),
+            //    EndDate = new DateTime(2019, 2, 10),
+            //    MealsMonday = new List<Meal>() { meal_Lasagna },
+            //    MealsTuesday = new List<Meal>() { normal_eggs },
+            //    MealsWednesday = new List<Meal>() { meal_Lasagna },
+            //    MealsThursday = new List<Meal>() { meal_Omelet },
+            //    MealsFriday = new List<Meal>() { meal_Lasagna },
+            //    MealsSaturday = new List<Meal>() { meal_Omelet },
+            //    MealsSunday = new List<Meal>() { normal_eggs }
+            //};
+            //context.Add(week1);
 
-            context.SaveChanges();
+            //context.SaveChanges();
         }
 
     }

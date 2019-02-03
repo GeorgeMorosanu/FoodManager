@@ -15,6 +15,9 @@ namespace Nesti.Data.Entities
         public string Name { get; set; }
         public int PreparationTime { get; set; }
         public string Instructions { get; set; }
-        public virtual List<Ingredient> Ingredients { get; set; }
+        public virtual ICollection<Ingredient> Ingredients { get; set; }
+
+        public virtual ICollection<WeekMeal> WeekMeals { get; set; }
+
     }
 }

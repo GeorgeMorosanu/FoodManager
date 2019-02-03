@@ -13,6 +13,6 @@ namespace Nesti.Data.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public Measurement Measurement { get; set; }
+        public virtual Measurement Measurement { get; set; }
     }
 }
