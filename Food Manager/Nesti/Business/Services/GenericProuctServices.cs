@@ -12,6 +12,11 @@ namespace Nesti.Business.Services
     {
         private readonly NsContext _databaseNsContext;
 
+        public GenericProuctServices(NsContext databaseNsContext)
+        {
+            _databaseNsContext= databaseNsContext
+        }
+
         public void Create(GenericProduct gp)
         {
             _databaseNsContext.GenericProducts.Add(gp);

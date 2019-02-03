@@ -12,6 +12,11 @@ namespace Nesti.Business.Services
     {
         private readonly NsContext _databaseNsContext;
 
+        public MealServices(NsContext databaseNsContext)
+        {
+            _databaseNsContext = databaseNsContext;
+        }
+
         public void Create(Meal meal)
         {
             _databaseNsContext.Meals.Add(meal);

@@ -17,111 +17,62 @@ namespace Nesti.Business.Services
             _databaseNsContext = databaseNsContext;
         }
         
-
-        public void AddAMealForFriday(Meal meal)
+    
+        public List<Meal> getMealsForFriday()
         {
-           /* Guid w1Id = _databaseNsContext.Weeks.ToList()[0].Id;
-
-            _databaseNsContext.WeekMeals.Add(new WeekMeal()
-            {
-                WeekId = w1Id,
-                MealId = meal.Id;
-            });*/
-            //_databaseNsContext.Weeks.ToList()[0].MealsFriday.Add(meal);
-            //_databaseNsContext.SaveChanges();
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                    join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                    where weekmeal.Day==4
+                    select meal).ToList();
+            
         }
 
-        public void AddAMealForMonday(Meal meal)
+        public List<Meal> getMealsForMonday()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsMonday.Add(meal);
-            //_databaseNsContext.SaveChanges();
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                where weekmeal.Day == 0
+                select meal).ToList();
         }
 
-        public void AddAMealForSaturday(Meal meal)
+        public List<Meal> getMealsForSaturday()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsSaturday.Add(meal);
-            //_databaseNsContext.SaveChanges();
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                where weekmeal.Day == 5
+                select meal).ToList();
         }
 
-        public void AddAMealForSunday(Meal meal)
+        public List<Meal> getMealsForSunday()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsSunday.Add(meal);
-            //_databaseNsContext.SaveChanges();
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                where weekmeal.Day == 6
+                select meal).ToList();
         }
 
-        public void AddAMealForThursday(Meal meal)
+        public List<Meal> getMealsForThursday()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsThursday.Add(meal);
-            //_databaseNsContext.SaveChanges();
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                where weekmeal.Day == 3
+                select meal).ToList();
         }
 
-        public void AddAMealForTuesday(Meal meal)
+        public List<Meal> getMealsForTuesday()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsTuesday.Add(meal);
-            //_databaseNsContext.SaveChanges();
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                where weekmeal.Day == 1
+                select meal).ToList();
         }
 
-        public void AddAMealForWednesday(Meal meal)
+        public List<Meal> getMealsForWednsday()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsWednesday.Add(meal);
-            //_databaseNsContext.SaveChanges();
-        }
-
-        public List<Ingredient> getIngredientsForTheWeek()
-        {
-            var result = new List<Ingredient>();
-            /*
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsMonday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            }
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsTuesday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            }
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsWednesday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            }
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsThursday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            }
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsFriday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            }
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsSaturday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            }
-            foreach (var meal in _databaseNsContext.Weeks.ToList()[0].MealsMonday.ToList())
-            {
-                foreach (var ing in meal.Ingredients)
-                {
-                    result.Add(ing);
-                }
-            } */
-
-            return result;
+            return (from weekmeal in _databaseNsContext.WeekMeals
+                join meal in _databaseNsContext.Meals on weekmeal.MealId equals meal.Id
+                where weekmeal.Day == 2
+                select meal).ToList();
         }
 
         public List<Week> getWeek()
@@ -129,47 +80,149 @@ namespace Nesti.Business.Services
             return _databaseNsContext.Weeks.ToList();
         }
 
-        public void RemoveAMealForFriday(Meal meal)
+        public List<Ingredient> getIngredientsForTheWeek()
         {
-            //_databaseNsContext.Weeks.ToList()[0].MealsFriday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
-        }
+            var result = new List<Ingredient>();
 
-        public void RemoveAMealForMonday(Meal meal)
-        {
-            //_databaseNsContext.Weeks.ToList()[0].MealsMonday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
-        }
+            foreach (var meal in getMealsForMonday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
 
-        public void RemoveAMealForSaturday(Meal meal)
-        {
-            //_databaseNsContext.Weeks.ToList()[0].MealsSaturday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
-        }
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
+            foreach (var meal in getMealsForTuesday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
 
-        public void RemoveAMealForSunday(Meal meal)
-        {
-            //_databaseNsContext.Weeks.ToList()[0].MealsSunday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
-        }
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
 
-        public void RemoveAMealForThursday(Meal meal)
-        {
-            //_databaseNsContext.Weeks.ToList()[0].MealsThursday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
-        }
+            foreach (var meal in getMealsForWednsday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
 
-        public void RemoveAMealForTuesday(Meal meal)
-        {
-            //_databaseNsContext.Weeks.ToList()[0].MealsTuesday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
-        }
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
 
-        public void RemoveAMealForWednesday(Meal meal)
-        {
-            //_databaseNsContext.Weeks.ToList()[0].MealsWednesday.Remove(meal);
-            //_databaseNsContext.SaveChanges();
+            foreach (var meal in getMealsForThursday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
+
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
+
+            foreach (var meal in getMealsForFriday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
+
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
+
+            foreach (var meal in getMealsForSaturday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
+
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
+
+            foreach (var meal in getMealsForSunday())
+            {
+                foreach (var ing in meal.Ingredients)
+                {
+                    var ok = 1;
+                    foreach (var res in result)
+                    {
+                        if (ing.GenericProduct == res.GenericProduct)
+                        {
+                            ok = 0;
+                        }
+                    }
+
+                    if (ok == 1)
+                    {
+                        result.Add(ing);
+                    }
+                }
+            }
+            return result;
         }
-        
     }
 }
