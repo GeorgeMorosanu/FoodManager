@@ -111,6 +111,11 @@ namespace Nesti.Business.Services
             return result;
         }
 
+        public List<Week> getWeek()
+        {
+            return _databaseNsContext.Weeks.ToList();
+        }
+
         public void RemoveAMealForFriday(Meal meal)
         {
             _databaseNsContext.Weeks.ToList()[0].MealsFriday.Remove(meal);

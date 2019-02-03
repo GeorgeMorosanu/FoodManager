@@ -190,6 +190,15 @@ namespace Nesti.Data
             };
             context.Add(meal_Omelet);
 
+            var normal_eggs = new Meal()
+            {
+                Name = names[0],
+                PreparationTime = rnd.Next(7, 10),
+                Instructions = "Only for the sake of having more meals.",
+                Ingredients = new List<Ingredient>() { ing5 }
+            };
+            context.Add(normal_eggs);
+
             context.SaveChanges();
 
             //week
@@ -199,12 +208,12 @@ namespace Nesti.Data
                 StartDate = new DateTime(2019, 2, 4),
                 EndDate = new DateTime(2019, 2, 10),
                 MealsMonday = new List<Meal>() { meal_Lasagna },
-                MealsTuesday = new List<Meal>() { meal_Omelet },
+                MealsTuesday = new List<Meal>() { normal_eggs },
                 MealsWednesday = new List<Meal>() { meal_Lasagna },
                 MealsThursday = new List<Meal>() { meal_Omelet },
                 MealsFriday = new List<Meal>() { meal_Lasagna },
                 MealsSaturday = new List<Meal>() { meal_Omelet },
-                MealsSunday = new List<Meal>() { meal_Lasagna }
+                MealsSunday = new List<Meal>() { normal_eggs }
             };
             context.Add(week1);
 

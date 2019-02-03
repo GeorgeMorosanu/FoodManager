@@ -15,7 +15,7 @@ namespace Nesti.Data
 
         public NsContext(DbContextOptions<NsContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -8,6 +8,7 @@ namespace Nesti.Business.Interfaces
 {
     public interface IWeekServices
     {
+        List<Week> getWeek();
         List<Ingredient> getIngredientsForTheWeek();
 
         void AddAMealForMonday(Meal meal);
