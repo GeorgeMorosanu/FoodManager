@@ -12,6 +12,11 @@ namespace Nesti.Business.Services
     {
         private readonly NsContext _databaseNsContext;
 
+        public IngredientSerices(NsContext databaseNsContext)
+        {
+            _databaseNsContext = databaseNsContext;
+        }
+
         public void Create(Ingredient ing)
         {
             _databaseNsContext.Ingredients.Add(ing);
