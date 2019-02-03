@@ -12,8 +12,21 @@ namespace Nesti.Business.Services
     {
         private readonly NsContext _databaseNsContext;
         
+        public WeekServices(NsContext databaseNsContext)
+        {
+            _databaseNsContext = databaseNsContext;
+        }
+        
+
         public void AddAMealForFriday(Meal meal)
         {
+           /* Guid w1Id = _databaseNsContext.Weeks.ToList()[0].Id;
+
+            _databaseNsContext.WeekMeals.Add(new WeekMeal()
+            {
+                WeekId = w1Id,
+                MealId = meal.Id;
+            });*/
             //_databaseNsContext.Weeks.ToList()[0].MealsFriday.Add(meal);
             //_databaseNsContext.SaveChanges();
         }

@@ -163,6 +163,7 @@ namespace Nesti.Data
             
             var meal_Lasagna = new Meal()
             {
+                Id = new Guid(),
                 Name = names[0],
                 PreparationTime = rnd.Next(20,120),
                 Instructions = "Preheat oven to 350 degrees F (175 degrees C).\n" +
@@ -177,7 +178,8 @@ namespace Nesti.Data
 
             var meal_Omelet = new Meal()
             {
-                Name = names[0],
+                Id = new Guid(),
+                Name = names[1],
                 PreparationTime = rnd.Next(7, 10),
                 Instructions = "BEAT eggs, 2 tbsp of water, 1/8 tsp of salt and a dash of pepper in small bowl until blended.\n" +
                 "HEAT 1 tsp of butter in 6 to 8-inch nonstick omelet pan or skillet over medium - high heat until hot.TILT pan to coat bottom.POUR IN egg mixture.Mixture should set immediately at edges.\n" +
@@ -192,7 +194,8 @@ namespace Nesti.Data
 
             var normal_eggs = new Meal()
             {
-                Name = names[0],
+                Id = new Guid(),
+                Name = "Eggs",
                 PreparationTime = rnd.Next(7, 10),
                 Instructions = "Only for the sake of having more meals.",
                 Ingredients = new List<Ingredient>() { ing5 }
@@ -202,6 +205,15 @@ namespace Nesti.Data
             context.SaveChanges();
 
             //week
+            
+            var week1 = new Week()
+            {
+                Id = new Guid(),
+                StartDate = new DateTime(2019, 2, 4),
+                EndDate = new DateTime(2019, 2, 10)
+            };
+            context.Add(week1);
+            context.SaveChanges();
 
             //var week1 = new Week()
             //{
@@ -218,6 +230,64 @@ namespace Nesti.Data
             //context.Add(week1);
 
             //context.SaveChanges();
+
+            WeekMeal wMon = new WeekMeal()
+            {
+                WeekId=week1.Id,
+                MealId= meal_Lasagna.Id,
+                Day = 0
+            };
+            context.Add(wMon);
+
+            WeekMeal wTue = new WeekMeal()
+            {
+                WeekId = week1.Id,
+                MealId = normal_eggs.Id,
+                Day = 1
+            };
+            context.Add(wTue);
+
+            WeekMeal wWed = new WeekMeal()
+            {
+                WeekId = week1.Id,
+                MealId = meal_Omelet.Id,
+                Day = 2
+            };
+            context.Add(wWed);
+
+            WeekMeal wThu = new WeekMeal()
+            {
+                WeekId = week1.Id,
+                MealId = meal_Lasagna.Id,
+                Day = 3
+            };
+            context.Add(wThu);
+
+            WeekMeal wFri = new WeekMeal()
+            {
+                WeekId = week1.Id,
+                MealId = normal_eggs.Id,
+                Day = 4
+            };
+            context.Add(wFri);
+
+            WeekMeal wSat = new WeekMeal()
+            {
+                WeekId = week1.Id,
+                MealId = meal_Lasagna.Id,
+                Day = 5
+            };
+            context.Add(wSat);
+
+            WeekMeal wSun = new WeekMeal()
+            {
+                WeekId = week1.Id,
+                MealId = meal_Omelet.Id,
+                Day = 6
+            };
+            context.Add(wSun);
+
+            context.SaveChanges();
         }
 
     }
