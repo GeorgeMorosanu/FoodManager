@@ -9,87 +9,286 @@
 
 <h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
+<header>
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="col-lg-4 my-auto h-100">
+            <div class="col-lg-9">
+                <div class="ingredients-container">
+
+                    <div id="generateList" class="btn btn-primary" style="margin: 25px 0">
+                        Generate ingredient list
+                    </div>
+                    <div id="ingredient-list" class="ingredient-list">
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Cheese</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">600 gr</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Yogurt</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">1.8 L</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Eggs</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">2 pc</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Pizza bottom</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">6 pc</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Pasta</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">1.4kg</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Beef</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">800 gr</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Tomatos</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">600 gr</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Lettuce</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">1 kg</p>
+                            </div>
+                        </div>
+                        <div class="row" name="ingredient row">
+                            <div class="col-lg-7">
+                                <p class="ingred-p">Hot dogs</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="ingred-p" style="text-align: right;">4 pc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
 
 
 
-<table class="table">
-    <thead>
-        <tr>
-           
-            <th>Monday</th>
-            <th>Thusday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StartDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EndDate)
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsMonday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsTuesday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsWednesday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsThursday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsFriday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsSaturday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    @*@foreach (var x in Model.ToArray()[0].MealsSunday)
-                        {
-                            @x.Name;
-                        }*@
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+            <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+                <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Monday</div>
+                <div id="monday" style="min-height: 50vh">
+                    @foreach (var wm in context.WeekMeals.Where(x => x.Day == 0))
+                    {
+                        var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                        <div>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>@meal.Name</th>
+                                    <th>@meal.PreparationTime</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    }
+                    <div class="bottom">
+                        <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                            Add meal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Tuesday</div>
+            <div id="tuesday" style="min-height: 50vh">
+                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 1))
+                {
+                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                    <div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                }
+                <div class="bottom">
+                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                        Add meal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Wednsday</div>
+            <div id="wednsday" style="min-height: 50vh">
+                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 2))
+                {
+                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                    <div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                }
+                <div class="bottom">
+                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                        Add meal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Thursday</div>
+            <div id="thursday" style="min-height: 50vh">
+                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 3))
+                {
+                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                    <div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                }
+                <div class="bottom">
+                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                        Add meal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Friday</div>
+            <div id="friday" style="min-height: 50vh">
+                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 4))
+                {
+                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                    <div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                }
+                <div class="bottom">
+                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                        Add meal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Saturday</div>
+            <div id="saturday" style="min-height: 50vh">
+                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 5))
+                {
+                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                    <div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                }
+                <div class="bottom">
+                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                        Add meal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-1 my-auto nopadding h-100" style="min-height: 50vh">
+        <div class="panel panel-primary h-100 borderfix-left borderbottomfix">
+            <div class="panel-heading" style="margin-bottom: 15px; border-radius: 0px">Sunday</div>
+            <div id="sunday" style="min-height: 50vh">
+                @foreach (var wm in context.WeekMeals.Where(x => x.Day == 6))
+                {
+                    var meal = context.Meals.Where(x => x.Id == wm.MealId).FirstOrDefault();
+                    <div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>@meal.Name</th>
+                                <th>@meal.PreparationTime</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                }
+                <div class="bottom">
+                    <button id="monday-button" type="button" class="btn btn-primary add-meal-button" data-toggle="modal" data-target="#exampleModal">
+                        Add meal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
