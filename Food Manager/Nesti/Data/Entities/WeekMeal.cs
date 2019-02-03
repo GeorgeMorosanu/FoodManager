@@ -9,8 +9,6 @@ namespace Nesti.Data.Entities
 {
     public class WeekMeal
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid WeekId { get; set; }
         public virtual Week Week { get; set; }
         public Guid MealId { get; set; }

@@ -233,10 +233,7 @@ namespace Nesti.Data
 
             //context.SaveChanges();
 
-            var wid = context.weeks.asnotracking().first().id.tostring();
-            console.writeline(wid);
 
-            /*
             WeekMeal wMon = new WeekMeal()
             {
                 WeekId = context.Weeks.AsNoTracking().First().Id,
@@ -302,8 +299,6 @@ namespace Nesti.Data
                 Day = 6
             };
             context.Add(wSun);
-            
-    */
 
             context.SaveChanges();
         }
