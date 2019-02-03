@@ -14,7 +14,7 @@ namespace Nesti.Business.Services
 
         public GenericProuctServices(NsContext databaseNsContext)
         {
-            _databaseNsContext= databaseNsContext
+            _databaseNsContext = databaseNsContext;
         }
 
         public void Create(GenericProduct gp)
