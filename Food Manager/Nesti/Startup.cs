@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using Nesti.Business.Interfaces;
+using Nesti.Business.Services;
 using Nesti.Data;
 
 namespace Nesti
@@ -40,6 +41,11 @@ namespace Nesti
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            services.AddTransient<IWeekServices, WeekServices>();
+            services.AddTransient<IGenericProuctServices, GenericProuctServices>();
+            services.AddTransient<IIngredientSerices, IngredientSerices>();
+            services.AddTransient<IMealServices, MealServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

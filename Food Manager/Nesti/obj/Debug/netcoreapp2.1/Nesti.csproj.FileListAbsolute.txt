@@ -5,7 +5,6 @@ C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\bin\Debug\netcore
 C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\bin\Debug\netcoreapp2.1\Nesti.pdb
 C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\bin\Debug\netcoreapp2.1\Nesti.Views.dll
 C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\bin\Debug\netcoreapp2.1\Nesti.Views.pdb
-C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\obj\Debug\netcoreapp2.1\Nesti.csprojAssemblyReference.cache
 C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\obj\Debug\netcoreapp2.1\Nesti.csproj.CoreCompileInputs.cache
 C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\obj\Debug\netcoreapp2.1\Nesti.RazorAssemblyInfo.cache
 C:\Users\georg\OneDrive\Desktop\FoodManager\Food Manager\Nesti\obj\Debug\netcoreapp2.1\Nesti.RazorAssemblyInfo.cs
