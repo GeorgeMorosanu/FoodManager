@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace Nesti.Data
 {
     public static class DbInitializer
@@ -231,61 +233,77 @@ namespace Nesti.Data
 
             //context.SaveChanges();
 
+            var wid = context.weeks.asnotracking().first().id.tostring();
+            console.writeline(wid);
+
+            /*
             WeekMeal wMon = new WeekMeal()
             {
-                WeekId=week1.Id,
-                MealId= meal_Lasagna.Id,
+                WeekId = context.Weeks.AsNoTracking().First().Id,
+                MealId = context.Meals.AsNoTracking().First(m => m.Name == "Lasagna").Id,
                 Day = 0
             };
             context.Add(wMon);
 
+
+            WeekMeal wMonTwo = new WeekMeal()
+            {
+                WeekId = context.Weeks.AsNoTracking().First().Id,
+                MealId = context.Meals.AsNoTracking().FirstOrDefault(m => m.Name == "Eggs").Id,
+                Day = 0
+            };
+            context.Add(wMonTwo);
+            
+
             WeekMeal wTue = new WeekMeal()
             {
-                WeekId = week1.Id,
-                MealId = normal_eggs.Id,
+                WeekId = context.Weeks.First().Id,
+                MealId= context.Meals.FirstOrDefault(m => m.Name == "Eggs").Id,
                 Day = 1
             };
             context.Add(wTue);
 
             WeekMeal wWed = new WeekMeal()
             {
-                WeekId = week1.Id,
-                MealId = meal_Omelet.Id,
+                WeekId = context.Weeks.First().Id,
+                MealId= context.Meals.FirstOrDefault(m => m.Name == "French omelet").Id,
                 Day = 2
             };
             context.Add(wWed);
 
             WeekMeal wThu = new WeekMeal()
             {
-                WeekId = week1.Id,
-                MealId = meal_Lasagna.Id,
+                WeekId = context.Weeks.First().Id,
+                MealId= context.Meals.FirstOrDefault(m => m.Name == "Lasagna").Id,
                 Day = 3
             };
             context.Add(wThu);
 
             WeekMeal wFri = new WeekMeal()
             {
-                WeekId = week1.Id,
-                MealId = normal_eggs.Id,
+                WeekId = context.Weeks.First().Id,
+                MealId= context.Meals.FirstOrDefault(m => m.Name == "French omelet").Id,
                 Day = 4
             };
             context.Add(wFri);
 
             WeekMeal wSat = new WeekMeal()
             {
-                WeekId = week1.Id,
-                MealId = meal_Lasagna.Id,
+                WeekId = context.Weeks.First().Id,
+                MealId= context.Meals.FirstOrDefault(m => m.Name == "Eggs").Id,
                 Day = 5
             };
             context.Add(wSat);
 
             WeekMeal wSun = new WeekMeal()
             {
-                WeekId = week1.Id,
-                MealId = meal_Omelet.Id,
+                WeekId = context.Weeks.First().Id,
+                MealId= context.Meals.FirstOrDefault(m => m.Name == "Eggs").Id,
                 Day = 6
             };
             context.Add(wSun);
+            
+    */
 
             context.SaveChanges();
         }
