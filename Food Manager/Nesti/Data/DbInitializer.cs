@@ -93,28 +93,131 @@ namespace Nesti.Data
             
             context.SaveChanges();
 
-            //ingredients
+            //ingredients 
+
+            index = 0;
+
+            var ing0 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[0],
+                Amount = 450
+            };
+            context.Add(ing0);
+
+            var ing1 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[1],
+                Amount = 50
+            };
+            context.Add(ing1);
+
+            var ing2 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[2],
+                Amount = 100
+            };
+            context.Add(ing2);
+
+            var ing3 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[3],
+                Amount = 800
+            };
+            context.Add(ing3);
+
+            var ing4 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[4],
+                Amount = 650
+            };
+            context.Add(ing4);
+
+            var ing5 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[5],
+                Amount = 2
+            };
+            context.Add(ing5);
+
+            var ing6 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[6],
+                Amount = 450
+            };
+            context.Add(ing6);
+
+            var ing7 = new Ingredient()
+            {
+                GenericProduct = context.GenericProducts.ToList()[4],
+                Amount = 100
+            };
+            context.Add(ing7);
+
+            context.SaveChanges();
 
             //meal
 
             index = 0;
 
-            names = new List<string> { "Lasagna", "Fish" };
+            names = new List<string> { "Lasagna", "French omelet" };
             
             var meal_Lasagna = new Meal()
             {
                 Name = names[0],
                 PreparationTime = rnd.Next(20,120),
-                Instructions = "Preheat oven to 350 degrees F (175 degrees C).\n"+
-                "In a large skillet,\n"+
+                Instructions = "Preheat oven to 350 degrees F (175 degrees C).\n" +
+                "In a large skillet,\n" +
                 "cook and stir ground beef until brown.Add mushrooms and onions; saute until onions are transparent.Stir in pasta sauce, and heat through.\n" +
                 "In a medium size bowl, combine cottage cheese, ricotta cheese, grated Parmesan cheese, and eggs.\n" +
                 "Spread a thin layer of the meat sauce in the bottom of a 13x9 inch pan.Layer with uncooked lasagna noodles, cheese mixture, mozzarella cheese, and meat sauce.Continue layering until all ingredients are used, reserving 1 / 2 cup mozzarella. Cover pan with aluminum foil.\n" +
                 "Bake in preheated oven for 45 minutes.Uncover, and top with remaining half cup of mozzarella cheese.Bake for an additional 15 minutes.Remove from oven, and let stand 10 to 15 minutes before serving.",
-                Ingredients = new List<Ingredient>() { }
+                Ingredients = new List<Ingredient>() { ing0,ing1,ing2,ing3,ing4,ing5,ing6}
             };
+            context.Add(meal_Lasagna);
+
+            var meal_Omelet = new Meal()
+            {
+                Name = names[0],
+                PreparationTime = rnd.Next(7, 10),
+                Instructions = "BEAT eggs, 2 tbsp of water, 1/8 tsp of salt and a dash of pepper in small bowl until blended.\n" +
+                "HEAT 1 tsp of butter in 6 to 8-inch nonstick omelet pan or skillet over medium - high heat until hot.TILT pan to coat bottom.POUR IN egg mixture.Mixture should set immediately at edges.\n" +
+                "GENTLY PUSH cooked portions from edges toward the center with inverted turner so that uncooked eggs can reach the hot pan surface.CONTINUE cooking,\n" +
+                "tilting pan and gently moving cooked portions as needed.\n" +
+                "When top surface of eggs is thickened and no visible liquid egg remains,\n" +
+                "PLACE the mozzarella on one side of the omelet.FOLD omelet in half with turner.With a quick flip of the wrist,\n" +
+                "turn pan and INVERT or SLIDE omelet onto plate.SERVE immediately.\n",
+                Ingredients = new List<Ingredient>() { ing5, ing7 }
+            };
+            context.Add(meal_Omelet);
+
+            var normal_eggs = new Meal()
+            {
+                Name = names[0],
+                PreparationTime = rnd.Next(7, 10),
+                Instructions = "Only for the sake of having more meals.",
+                Ingredients = new List<Ingredient>() { ing5 }
+            };
+            context.Add(normal_eggs);
+
+            context.SaveChanges();
 
             //week
+
+            var week1 = new Week()
+            {
+                StartDate = new DateTime(2019, 2, 4),
+                EndDate = new DateTime(2019, 2, 10),
+                MealsMonday = new List<Meal>() { meal_Lasagna },
+                MealsTuesday = new List<Meal>() { normal_eggs },
+                MealsWednesday = new List<Meal>() { meal_Lasagna },
+                MealsThursday = new List<Meal>() { meal_Omelet },
+                MealsFriday = new List<Meal>() { meal_Lasagna },
+                MealsSaturday = new List<Meal>() { meal_Omelet },
+                MealsSunday = new List<Meal>() { normal_eggs }
+            };
+            context.Add(week1);
+
+            context.SaveChanges();
         }
 
     }
